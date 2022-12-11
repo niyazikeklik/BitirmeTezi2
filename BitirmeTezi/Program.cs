@@ -45,7 +45,6 @@ namespace BitirmeTezi
 					 options.UseSqlite("Data Source=database.db"));
 
 					services.AddTransient<Form1>();
-					services.AddScoped<NewContext>();
 				});
 		}
 	}

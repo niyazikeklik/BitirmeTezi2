@@ -6,7 +6,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using static Entity.Abstract.Enums;
 
 namespace Entity.Abstract
 {

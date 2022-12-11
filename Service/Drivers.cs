@@ -23,8 +23,6 @@ namespace Service
 		}
 		public static object JsRun(this IWebDriver driver, string command)
 		{
-
-
 			IJavaScriptExecutor jse = (IJavaScriptExecutor)driver;
 			int count = 0;
 			string exMg;

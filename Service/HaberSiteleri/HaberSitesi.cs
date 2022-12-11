@@ -9,17 +9,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using static Entity.Abstract.Enums;
 
 namespace Service.HaberSiteleri
 {
-	public class BBC : IHaberSitesi
+	public class HaberSitesi : IHaberSitesi
 	{
 		public IWebDriver driver { get; set; }
-		public Enums.Kategoriler Kategori { get; set; }
-		public BBC(IWebDriver driver, Kategoriler kategori)
+		public HaberSitesi(IWebDriver driver)
 		{
-			this.Kategori = kategori;
 			this.driver = driver;
 		}
 		public string? GetBaslik(string js)
@@ -43,7 +40,6 @@ namespace Service.HaberSiteleri
 			string tarih = driver.JsRun(js) as string;
 			if (tarih != null)
 			{
-
 				DateTime time = DateTime.Parse(tarih);
 				return time;
 			}

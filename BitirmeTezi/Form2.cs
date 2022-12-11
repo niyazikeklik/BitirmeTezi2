@@ -75,7 +75,7 @@ public partial class Form2 : Form
 		Task.Run(() =>
 		{
 			var dr = Drivers.CreateDrivers();
-			var bbc = new BBC(dr, Entity.Abstract.Enums.Kategoriler.Ekonomi);
+			var bbc = new HaberSitesi(dr);
 			List<Haber> haberler = new();
 			foreach (var item in Linkler)
 			{
@@ -301,7 +301,7 @@ public partial class Form2 : Form
 		{
 			metroProgressBar1.Minimum = 0;
 			metroProgressBar1.Maximum = this.gridView1.View.Rows.Count;
-			if (metroProgressBar1.Value == metroProgressBar1.Maximum)
+			if (metroProgressBar1.Value == metroProgressBar1.Maximum + 1)
 			{
 				metroProgressBar1.Value = 0;
 				MessageBox.Show("Tamamlandı");
